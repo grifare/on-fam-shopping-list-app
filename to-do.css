@@ -1,0 +1,431 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * Author name    : Armagan Tekdoner
+ * Student Number : 200253439
+ * Assignment Name: To Do List Web App
+ * Instructor     : Derek Buttineau
+ * Date           : April 2014
+ * File name      : to-do.css
+ */
+
+
+/* global styling */
+body{
+	font-family: Helvetica, Verdana, sans-serif;
+	color: #002a60;
+}
+
+ /* avoid borders on links */
+img{ border: none; }
+
+	  /* behaviours of hyperlinks */
+	  a:link {/* unvisited link */
+		  color: #5994df;
+	  }      
+	  a:visited {/* visited link */
+		  color: #442ad0;
+		  text-decoration: none;
+	  }
+	  a:hover {/* mouseover link */
+		  color: #fff;
+		  text-decoration: none;	  
+	  }  
+	  a:active {/* clicked link */
+		  color: #f00;  
+		  text-decoration: none;	  
+	  }
+
+
+/* TOP section */
+header{
+	text-align: center;
+}
+
+/* app name */
+header span{
+	font-size: 2.2em;
+}
+
+/* [by] */
+header span + span{
+	margin-left: 20px;
+	font-size: 0.5em;
+	margin-right: 10px;
+	vertical-align: 9px;
+}
+
+/* how do I? */
+header span:nth-of-type(3),
+/* video */
+span.video{
+	margin-left: 15px;
+	font-size: 1em;
+	background-color: #a1bcdF;
+	color: #fff;
+	padding-left: 2px;
+	padding-right: 2px;	
+	vertical-align: 10px;
+	display: inline-block;
+	cursor: pointer; 	
+}
+span.video{ width: 114px; }
+/* TOP section ends */
+
+/* help boxes */
+/* help boxes normally hidden */
+	aside div:first-of-type,
+	aside div:last-of-type{
+		display: none;	
+	}
+	
+	aside div{
+		position: absolute;
+		float: right;
+		right: 40px;
+		margin-top: 0px;
+		padding: 4px;
+		z-index: 300;
+		font-size: 0.9em;
+		text-align: left;
+		border: 1px solid #002a60;
+		border-radius: 15px;
+		background-color: #a1bcdF;
+	}
+	
+	iframe{
+		position: absolute;
+		float: right;
+		right: 40px;
+		margin-top: 0px;
+		padding: 4px;
+		z-index: 300;
+		border: 1px solid #002a60;
+		border-radius: 15px;
+		background-color: #a1bcdF;
+		width: 730px;
+		height: 420px;		
+	}
+	
+	/* removes the help boxes */
+	aside button{
+		width: 280px;
+		text-align: center;
+		position:relative;
+		float: left;
+		margin-left: 190px;
+	}
+/* help boxes end */
+
+/* LEFT section begins */
+section:first-of-type{
+	float: left;
+	text-align: left;
+	background-color: #00132c;
+	color: #a1bcdF;
+	padding: 5px;
+	margin-bottom: 50px;
+}
+
+/* present in both left and right sections */
+h2{
+	float: left;
+}
+
+/* all ps */
+section:first-of-type p{
+	font-size: 1.2em;
+	font-weight: normal;
+	text-align: left;
+	float: left;
+	width: 100%;	
+}
+
+section:first-of-type p:first-of-type{
+	margin-top: -4px;
+	margin-bottom: 0px;	
+}
+
+section:first-of-type td{
+	width: 30%;
+}
+
+section:first-of-type table tr:last-of-type td{
+	border-top: 1px solid #fff;	
+	border-bottom: 1px solid #fff;
+	height: 40px;
+}
+
+/* shopping items */
+section:first-of-type ol{
+	float: left;	
+	display: none;
+	margin-top: -5px;
+	margin-left: -10px;
+}
+
+section:first-of-type ol li{
+	cursor: pointer; 
+	cursor: hand;
+}
+/* LEFT section ends */
+
+
+/* RIGHT section begins */
+section:last-of-type{
+	float: right;
+	text-align: left;
+	padding: 5px;
+	padding-left: 5px;
+		background-color: #fff;
+		z-index: 100;	
+}
+
+/* printer button */
+section:last-of-type button{
+	float: right;
+	padding-right: 10px;
+	margin-top: 14px;
+}
+
+/* store names */
+section:last-of-type caption{
+	text-align: center;
+	font-size: 1.2em;
+	background-color: #17273b;
+	color: #e9D0a8;
+	padding: 2px;
+}
+
+/* alternating backgrounds for odd and even rows */
+section:last-of-type tr:nth-child(even){
+	background-color: rgba(161,188,223, 0.2);
+}
+
+/* already edited items */
+section:last-of-type table span{
+	cursor: not-allowed;
+}
+
+/* item names */
+section:last-of-type table td{
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+/* marked as purchased */
+section:last-of-type td:nth-last-of-type(2),
+/* delete */
+section:last-of-type td:last-of-type{
+	width: 10%;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: right;
+}
+section:last-of-type td:nth-last-of-type(2){ color: #5994df; }
+section:last-of-type td:last-of-type{ color: #e9b45d; }
+
+/* extra items */
+section:last-of-type div{
+	display: none;
+	margin-bottom: 45px;	
+}
+/* RIGHT section ends */
+
+/* BOTTOM begins */
+footer{
+	position: fixed;
+	bottom: 0;	
+	left: 0;
+	right: 0;
+	height: 40px;
+	font-size: 0.6em;
+	text-align: center;
+	color: #e9D0a8;
+	  /* for earlier browsers */
+	  background-color: #925a00; 
+	  /*gradient generator http://www.css3factory.com/linear-gradients/ */	  
+	  background-image: -webkit-gradient(
+		  linear,
+		  left top,
+		  left bottom,
+		  color-stop(0.50, #925A00),
+		  color-stop(1, #fff)
+	  );
+	  background-image: -o-linear-gradient(bottom, #925A00 50%, #fff 100%);
+	  background-image: -moz-linear-gradient(bottom, #925A00 50%, #fff 100%);
+	  background-image: -webkit-linear-gradient(top, #925A00 50%, #fff 100%);
+	  background-image: -ms-linear-gradient(bottom, #925A00 50%, #fff 100%);
+	  background-image: linear-gradient(to bottom, #925A00 50%, #fff 100%);
+	z-index: 200;
+}
+
+footer ul{
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer ul li{
+	list-style-type: none;
+	display: inline;
+	margin-right: 10px;		
+}
+/* global styling ends */
+
+
+/* styles to apply depending on widths of device screens */
+/* desktop */
+  @media only screen and (min-width : 1366px) {
+	body{
+		/* background image (shopping cart) appears only in larger screens */
+		background-image: url(images/shopping_cart.png);
+		background-repeat: repeat-y;
+		background-position: right;
+		background-attachment: fixed;		  
+	}
+	
+	h2{
+		font-size: 1.3em;
+	}
+	
+	article{
+		width: 1366px;
+		margin-left: auto;
+		margin-right: auto;	
+	}
+	
+	section:first-of-type, 
+	section:first-of-type table{
+		width: 470px;
+	    font-size: 0.8em;
+	}
+		
+	section:last-of-type, 
+	section:last-of-type table{
+		width: 860px;
+	}	
+		
+	section:last-of-type
+	section:first-of-type,{
+		margin-bottom: 75px;		
+	}
+		  	  
+  }
+  
+	  
+/* laptop - tablet */	  
+  @media only screen and (min-width : 721px) and (max-width : 1365px) {
+	h2{
+		font-size: 1.2em;
+		font-weight: 600;
+	}
+		  
+	article{
+		margin-left: auto;
+		margin-right: auto;
+	    font-size: 0.7em;
+		padding-bottom: 70px;		
+	}
+
+	section:first-of-type, section:first-of-type table{
+		width: 305px;		
+	}
+		
+	section:last-of-type{
+		/* Firefox */
+		width: -moz-calc(100% - 330px);
+		/* WebKit */
+		width: -webkit-calc(100% - 330px);
+		/* Opera */
+		width: -o-calc(100% - 330px);
+		/* Standard */
+		width: calc(100% - 330px);
+		margin-bottom: 75px;		
+	}
+	
+	section:last-of-type table{
+		width: 100%;
+	}
+	
+	section:last-of-type button{
+		float: right;
+		padding-right: 10px;
+		margin-top: 2px;
+	}
+	
+	footer{
+		height: 70px;	
+	}
+		  
+  }
+  
+  
+/* big phone */ 
+  @media only screen and (min-width : 481px) and (max-width : 720px) {
+	header span:first-of-type{
+		font-size: 1.8em;
+	}
+	
+	header span:nth-of-type(2),/* erases the word 'by' */
+	header span:nth-of-type(3),			
+	span.video,/* no help should be needed if one is apping with such small devices */	
+	aside
+	{
+		display: none;
+	}
+	  
+	h2{
+		font-size: 1.2em;
+	}
+
+	section:last-of-type h2{
+		margin-top: -35px;		
+	}
+		  
+	article{
+		width: 480px;	
+		margin-left: auto;
+		margin-right: auto;
+	    font-size: 0.9em;	
+		margin-bottom: 170px;					
+	}
+
+	section:first-of-type, section:first-of-type table{
+		position: relative;
+		width: 480px;
+		float: left;	
+	}
+		
+	section:last-of-type,
+	section:last-of-type table{
+		position: relative;
+		width: 480px;
+		float: left;		
+	}
+		
+	section:last-of-type{
+		margin-bottom: 75px;
+	}
+	
+	section:last-of-type button{
+		float: left;
+		margin-bottom: 10px;
+	}
+	
+	footer{
+		height: 70px;	
+	}		  	  	  
+	  
+  }
+
+/* small phones cannot be used */
+  @media only screen and (max-width : 480px) {
+	  header, article, footer{
+		display: none;  
+	  }
+	  
+  }
+/* end of css file */

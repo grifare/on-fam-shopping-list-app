@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Author name		: Armagan Tekdoner -->
+  <!-- Website			: grifare.info -->  
+  <!-- Student Number 	: 200253439 -->
+  <!-- Assignment Name	: To Do List Web App -->
+  <!-- Instructor     	: Derek Buttineau -->
+  <!-- Date           	: April 2014 -->
+  <!-- File name      	: to-do.html -->
+  <title>ON FAM SHOPPING LIST</title>
+  <!--Browser icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="http://www.grifare.info/favicon.ico" />  
+  <meta name="viewport" content="width=device-width, user-scalable=no">  
+  <meta name="description" content="A small application, ONTARIO FAMILY SHOPPING LIST, intended to help shoppers remember what items they need to buy." />
+  <meta name="keywords" content="shopping application,ON FAMILY SHOPPING LIST,tekdoner" />  
+  <!-- responsive design is from within one external stylesheet -->
+  <link rel="stylesheet" type="text/css" media="screen" href="to-do.css" />
+  <!-- separate stylesheet for printing -->
+  <link rel="stylesheet" type="text/css" media="print" href="print-to-do.css" />  
+  <!-- google hosted cdn -->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+      <!--for testing locally, comment-out before uploading-->
+ <!--     <script src="jquery-2.1.0.min.js"></script>  -->
+  <!-- external JavaScript file -->
+  <script src="to-do.js"></script>
+</head>
+
+<body>
+  <header>
+      <span>ON FAM SHOPPING LIST</span>
+      <span>by</span><a href="http://www.grifare.info" target="_blank"><img src="images/sgf-logo.png" alt="studio gri fare" title="studio gri fare" /></a>
+      <span>How do I...</span>
+      <span class="video">How-to Video</span>
+      <span class="video" style="display: none;">Remove Video</span>           
+  </header>
+  
+  <!-- help section -->
+  <aside>
+ 	<div><!--help text-->
+<pre>
+… add an item to the list?
+  From "Frequently needed items" list on the left-hand side
+    &#9642; Choose a store name by clicking checkboxes
+    &#9642; Items of that store are then automatically listed along with their
+    shop's names underneath the checkboxes you checked
+    &#9642; Click on any item(s) you want to add to your list
+    &#9642; That item is instantly displayed on the right-hand side of the screen
+
+  From the text field of "Add an Extra Item ":
+    &#9642; Type anything up to 50 characters
+    &#9642; Hit "Enter" key and that word is posted under the list on the
+    right-hand side
+    &#9642; If you hit enter without typing anything, a reminder pops up giving
+    you 2 options: either the same field can be filled in or that item you
+    wanted to edit can be deleted
+    (No worries, you can easily re-add it at one click.)
+    !! Extra Items cannot be edited or marked as purchased.
+    Solution: Simply delete or recreate them
+
+… remove an item?
+    &#9642; Click the cross sign corresponding to the item on its right-hand side
+    &#9642; Extra items are deleted simply by clicking them
+
+… edit an item?
+    &#9642; Click on the item to edit: a text field will replace it
+    &#9642; Click inside that text field and type
+    &#9642; Then click anywhere outside the field: the new text automatically
+    replaces the old item
+    &#9642; If you click in the text field and leave without typing, a dialogue
+    appears which either deletes the newly-inserted text field or waits for
+    your input
+    !! Once you click to edit, that item is either edited or deleted
+    Solution: If what you wanted was deleted, simply add it again    
+
+… mark what I already purchased?
+  From "Frequently needed items" list on the left-hand side
+    &#9642; Any item added can be marked as "PURCHASED" and be stricken-through, by
+    clicking a check sign that has been created on the far right-hand side, along
+    with that item's insertion.
+    
+… print a printer-friendly list?
+  Click on the button "Print Shopping list" and only the list you generated will be
+printed, using a light-weight printer-friendly font. No backgrounds, no buttons,
+no images, no empty fields. No resizing or editing. Alternatively, you can use
+browser's print functionality as well and you will get the same friendly layout.
+</pre>
+    	<button>Got it! Remove this.</button> 
+	</div>
+    
+    <div><!-- help video --></div>        
+  </aside>
+  
+  <article>
+    <section><!--first of type-->
+      <h2>Frequently needed items</h2>
+      <p>Check the boxes of the stores to go to</p>      
+          <table>
+            <tr>
+                <td><input type="checkbox" value="wal-mart" name="stores">Wal-Mart</td>
+                <td><input type="checkbox" value="food-basics" name="stores">Food Basics</td>
+                <td><input type="checkbox" value="zehrs" name="stores">Zehrs</td>
+            </tr>
+            <tr>        
+                <td><input type="checkbox" value="canadian-tire" name="stores">Canadian Tire</td>
+                <td><input type="checkbox" value="beer-store" name="stores">Beer S. / LCBO</td>
+                <td><input type="checkbox" value="home-depot" name="stores">Home Depot</td>
+            </tr>
+            <tr>
+            	<td colspan="3"><label>Add an Extra Item and Hit Enter </label><input type="text" name="extra" maxlength="50" size="30" title="Click here and type" /></td>            
+            </tr>
+          </table>
+      <p>Click on the items to add to shopping list</p>
+        <!-- ordered list for Wal-Mart items frequently purchased -->
+	 		<ol>
+              <script>
+                listWalMmartItems();
+              </script>         
+            </ol>
+            <!-- ordered list for Food Basic items frequently purchased -->        
+            <ol>
+              <script>
+                listFoodBasicsItems();
+              </script>              
+            </ol>
+            <!-- ordered list for Zehrs items frequently purchased -->        
+            <ol>
+              <script>
+                listZehrsItems();
+              </script>                   
+            </ol>        
+            <!-- ordered list for Canadian Tire items frequently purchased -->            
+             <ol>
+              <script>
+                listCanadianTireItems();
+              </script>                
+            </ol>
+            <!-- ordered list for Beer Store items frequently purchased -->            
+            <ol>
+              <script>
+                listBeerStoreItems();
+              </script>                 
+            </ol>
+            <!-- ordered list for Home Depot items frequently purchased -->            
+            <ol>
+              <script>
+                listHomeDepotItems();
+              </script>              
+            </ol>           
+
+    </section><!--close first of type-->
+     
+    <section><!--last of type-->
+      <h2>Items to buy | Shopping list generated on <script>document.write(dateAndTime);</script></h2>
+      <!-- javascript printer button -->
+      <button onclick="printList();">Print Shopping list</button>      
+        <!-- Wal-Mart items to be purchased -->      
+          <table></table>
+        <!-- Food Basics items to be purchased -->         
+          <table></table>
+        <!-- Zehrs items to be purchased -->      
+          <table></table>
+        <!-- Canadian Tire items to be purchased -->         
+          <table></table>
+        <!-- Beer Store to be purchased -->         
+          <table></table>
+        <!-- Home Depot items to be purchased -->         
+          <table></table>
+          
+       <div><hr />Extra Items Required:</div>
+          
+    </section><!--close last of type-->
+  </article>
+  
+  <footer>
+    <ul>
+      <li>copyright &copy; <script>document.write(currentYear);</script> by Armagan Tekdoner</li>
+      <li>|</li>
+      <li><a href="http://www.grifare.info" target="_blank">Official Website</a></li>
+      <li>|</li>      
+      <li><a href="on-fam-shopping-list-app.zip">Download</a> zipped folder of this app for offline use</li>
+      <li>|</li>     
+      <li>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0; margin-bottom: -4px;" src="http://i.creativecommons.org/l/by/4.0/80x15.png" /></a> 
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>

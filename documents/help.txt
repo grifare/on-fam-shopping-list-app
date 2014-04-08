@@ -1,0 +1,32 @@
+HOW DO I...
+
+… add an item to the list?
+  From "Frequently needed items" list on the left-hand side
+    Choose a store name by clicking checkboxes
+    Items of that store are then automatically listed along with their shop's names underneath the checkboxes you checked
+    Click on any item(s) you want to add to your list
+    That item is instantly displayed on the right-hand side of the screen
+
+  From the text field of "Add an Extra Item ":
+    Type anything up to 50 characters
+    Hit "Enter" key and that word is posted under the list on the right-hand side
+    If you hit enter without typing anything, a reminder pops up giving you 2 options: either the same field can be filled in or that item you wanted to edit can be deleted
+    (No worries, you can easily re-add it at one click.)
+    !! Extra Items cannot be edited or marked as purchased. Simply delete and recreate them
+
+… remove an item?
+    Click the cross sign corresponding to the item on its right-hand side 
+    Extra items are deleted simply by clicking them
+
+… edit an item?
+    Click on the item to edit: a text field will replace it
+    Type inside that text field
+    Then click anywhere outside the field: the new text replaces the old item
+    If you click in the text field and leave without typing, a dialogue appears which either deletes the newly-inserted text field or waits for your input
+
+… mark what I already purchased?
+  From "Frequently needed items" list on the left-hand side
+    Any item added can be marked as "PURCHASED" and be stricken-through, by clicking a check sign that has been created on the far right-hand side, along with that item's insertion.
+    
+… print a printer-friendly list?
+  Click on the button "Print Shopping list" and only the list you generated will be printed, using a light-weight printer-friendly font. No  backgrounds, no buttons, no images, no empty fields. No resizing or editing. Alternatively, you can use browser's print functionality as well and you will get the same friendly layout.  

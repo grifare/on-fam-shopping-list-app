@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * Author name    : Armagan Tekdoner
+ * Student Number : 200253439
+ * Assignment Name: To Do List Web App
+ * Instructor     : Derek Buttineau
+ * Date           : April 2014
+ * File name      : print-to-do.css
+ * url            : http://webdesign4.georgianc.on.ca/~200253439/comp1073/to-do/print-to-do.css
+ */
+
+/* css file for printing only */
+/* only the list of items to buy is displayed */
+body{
+	/* printer-friendly font */
+	font-family: "Courier New", Courier, monospace;
+	color: #000;
+}
+
+header,
+aside,
+section:first-of-type,
+footer{
+	display: none;
+}
+
+section:last-of-type{
+	width: 511pt;
+	background-color: #fff;
+	z-index: 100;		
+}
+
+section:last-of-type h2{
+	float: left;
+	font-size: 14pt;
+	font-weight: 500;	
+}
+
+section:last-of-type table{
+	position: relative;
+	float: left;
+	text-align: left;
+	width: 500pt;
+}
+
+section:last-of-type caption{
+	font-size: 14pt;
+	margin-top: 10pt;
+	width: 400pt;	
+}
+
+section:last-of-type table td{
+	font-size: 12pt;
+	margin-left: 80pt;
+	width: 400pt;
+}
+
+section:last-of-type div{
+	position: relative;
+	float: left;
+	text-align: left;
+	width: 500pt;
+}
+
+/* printer button */
+section:last-of-type button,
+/* cross sign */
+section:last-of-type td:last-of-type, 
+/* check mark */
+section:last-of-type td:nth-last-of-type(2){
+	display: none;
+}
